@@ -1,6 +1,6 @@
 package businessLogic;
 
-public class BusinessLogic {
+public class CarInfoTest {
 
     /**
      * @param args the command line arguments
