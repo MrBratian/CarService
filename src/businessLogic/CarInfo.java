@@ -7,37 +7,35 @@ public class CarInfo {
     private int model;
     private LocalDate lastVisit;
 
-public CarInfo (String brand, String id, int model, LocalDate lastVisit){
-    this.brand = brand;
-    this.id = id;
-    this.model = model;
-    this.lastVisit = lastVisit;
+    public CarInfo (String brand, String id, int model, LocalDate lastVisit){
+        this.brand = brand;
+        this.id = id;
+        this.model = model;
+        this.lastVisit = lastVisit;
+    }
+
+        public String getBrand() {
+            return brand;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public int getModel() {
+            return model;
+        }
+
+        public LocalDate getLastVisit() {
+            return lastVisit;
+        }
+
+    public boolean validid(){
+         return id != null && lastVisit != null;
+
+     }
+
+    public long daysSinceLastVisit(){
+        return java.time.temporal.ChronoUnit.DAYS.between(lastVisit, LocalDate.now());
+    }
 }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public int getModel() {
-        return model;
-    }
-
-    public LocalDate getLastVisit() {
-        return lastVisit;
-    }
-    
-public long daysSinceLastVisit(){
-    return java.time.temporal.ChronoUnit.DAYS.between(lastVisit, LocalDate.now());
-}
-
- public boolean validid(){
- return id != null && lastVisit != null;
-    
- }
-
-}
-
