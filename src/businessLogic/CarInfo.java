@@ -30,10 +30,10 @@ public class CarInfo {
             return lastVisit;
         }
 
-    public boolean validid(){
-         return id != null && lastVisit != null;
+    public boolean validid() {
+        return id != null && id.matches("[A-Z]{3}-\\d{3}");
+    }
 
-     }
 
     public long daysSinceLastVisit(){
         return java.time.temporal.ChronoUnit.DAYS.between(lastVisit, LocalDate.now());

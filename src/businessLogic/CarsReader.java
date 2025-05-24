@@ -77,8 +77,11 @@ public class CarsReader {
     public void showCars() {
         for (int i = 0; i < numberOfCars; i++) {
             CarInfo car = cars[i];
-            System.out.println("CarInfo [brand=" + car.getBrand() + ", id=" + car.getId() + ", model=" + 
-                    car.getModel() + ", lastVisit=" + car.getLastVisit() +"]"+ ", Placa válida: " +  car.validid());     
+            long dias = car.daysSinceLastVisit();
+            String placaValida = car.validid() ? "Placa válida" : "Placa no válida";
+
+            System.out.println("CarInfo [brand=" + car.getBrand() + ", id=" + car.getId() + ", model=" +
+                    car.getModel() + ", lastVisit=" + car.getLastVisit() + "], " + dias + " días, " + placaValida);
         }
     }
 }
