@@ -1,3 +1,12 @@
+/*
+ * Taller 2 – Parte 2
+ */
+
+/*
+ * @authors
+ * Julian David Gomez Sequeda
+ * Brayan Sebastian Vanegas Acero
+ */
 package businessLogic;
 
 import java.io.File;
